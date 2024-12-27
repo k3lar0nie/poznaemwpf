@@ -1,0 +1,39 @@
+﻿<Window x:Class="poznaemwpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:poznaemwpf"
+        mc:Ignorable="d"
+        Title="LibraryApp" Height="550" Width="800">
+        <Grid>
+                <!-- <DataGrid Name="Semyon" Height="330" Width="786" Margin="3,-113,0,0"></DataGrid> -->
+                <!-- <DataGrid Name="Semyon" Height="330" Margin="0,-100,0,0"></DataGrid> -->
+                <DataGrid IsReadOnly="True" Name="MainTable" Height="330" HorizontalAlignment="Left" VerticalAlignment="Top" Width="786"></DataGrid>
+                
+                <!-- для книг -->
+                <Button Height="20" Width="100" Margin="20, 350, 660, 20" Name="ButtonAdd" Click="AddBook">Добавить книгу</Button>
+                <Button Height="20" Width="100" Margin="20, 400, 660, 20" Name="ButtonDelete" Click="DeleteBook">Удалить книгу</Button>
+                <Button Height="20" Width="100" Margin="20, 450, 660, 20" Name="ButtonGive">Выдать книгу</Button>
+
+                
+                <TextBox Height="20" Width="100" Name="BookName" Margin="20, 350, 400, 20">Название</TextBox>
+                <TextBox Height="20" Width="100" Name="BookAuthor" Margin="20, 350, 200, 20">Автор</TextBox>
+                <TextBox Height="20" Width="100" Name="BookGenre" Margin="20,350, 0, 20">Жанр</TextBox>
+
+                <Button Height="20" Width="150" Margin="600,400, 0, 20" Name="ButtonLoadBooks" Click="LoadBooksButton">загрузить книги</Button>
+                <Button Height="20" Width="150" Margin="600,400, 0, 20" Name="ButtonLoadReadCard" Click="LoadReadersCardButton">загрузить чит. билеты</Button>
+
+                <!-- для читательского билета -->
+                <TextBox Height="20" Width="70" Name="ReaderName" Margin="20, 350, 400, 20">Имя</TextBox>
+                <TextBox Height="20" Width="70" Name="ReaderSurname" Margin="20, 350, 250, 20">Фамилия</TextBox>
+                <TextBox Height="20" Width="70" Name="ReaderMiddleName" Margin="20, 350, 100, 20">Отчество</TextBox>
+                <TextBox Height="20" Width="70" Name="ReaderAge" Margin="20, 350, -50, 20">Возраст</TextBox>
+                <TextBox Height="20" Width="70" Name="ReaderPhoneNumber" Margin="20, 350, -200, 20">Номер</TextBox>
+                <TextBox Height="20" Width="70" Name="ReaderEmail" Margin="20, 350, -350, 20">Почта</TextBox>
+                
+                <Button Height="20" Width="100" Margin="20, 350, 660, 20" Name="ReaderAddButton" Click="ReaderAdd">Добавить читателя</Button>
+                <Button Height="20" Width="100" Margin="20, 400, 660, 20" Name="ReaderDeleteButton" Click="ReaderRemove" >Удалить читателя</Button>
+                
+        </Grid>
+</Window>
